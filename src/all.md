@@ -15,34 +15,34 @@ First, identify the pairs of physical Ethernet ports to be used for the new file
 
 Navigate to the `Settings/NETWORK/Connectors` configuration page to review the available physical Ethernet ports.
 
-![Settings/NETWORK/Connectors](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/settings.network.configuration.png)
+![Settings/NETWORK/Connectors](./img/vif.physical/settings.network.configuration.png)
 
 In this example, we will use the `eth4` and `eth5` ports. Right-click on the Ethernet widget's menu and select the `Create Virtual Network Interface` option.
 
-![Create Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/create.file.vif.png)
+![Create Virtual Network Interface](./img/vif.physical/create.file.vif.png)
 
 In the `Create Virtual Network Interface` dialog, enter the `Name` and `IP Address`, then click the edit icon next to the `Subinterfaces` field.
 
-![Create Virtual Network Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/create.file.vif.dialog.png)
+![Create Virtual Network Interface Dialog](./img/vif.physical/create.file.vif.dialog.png)
 
 Select the `eth4` and `eth5` physical Ethernet port pairs.
 
-![Select Subinterfaces](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/create.file.vif.dialog.subinterfaces.png)
+![Select Subinterfaces](./img/vif.physical/create.file.vif.dialog.subinterfaces.png)
 
 Click the `Select` button in the dialog, then click the `Add` button in the previous dialog.
 
 #### Edit and Enable the File Virtual Interface using GUI
 Find the new `filevif0` file virtual interface in the `Settings/NETWORK/Connectors` page and click the `Edit` button.
 
-![Edit Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/edit.file.vif.png)
+![Edit Virtual Network Interface](./img/vif.physical/edit.file.vif.png)
 
 Specify the `Netmask` and `Gateway` values, and enable the new file virtual interface.
 
-![Edit Virtual Network Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/edit.file.vif.dialog.png)
+![Edit Virtual Network Interface Dialog](./img/vif.physical/edit.file.vif.dialog.png)
 
 If you no longer need the file virtual interface, you can delete it by clicking the `Delete` command in the Ethernet list.
 
-![Delete Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/delete.file.vif.png)
+![Delete Virtual Network Interface](./img/vif.physical/delete.file.vif.png)
 
 
 ### FlashArray Command Line Interface
@@ -115,66 +115,66 @@ First, we need to create two LACP virtual interfaces. Begin by identifying the g
 
 Navigate to the `Settings/NETWORK/Connectors` configuration page to review the available physical Ethernet ports.
 
-![Settings/NETWORK/Connectors](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/settings.network.configuration.png)
+![Settings/NETWORK/Connectors](./img/vif.physical/settings.network.configuration.png)
 
 In this example, we will use the `ct0.eth4` and `ct0.eth5` ports. Right-click on the Ethernet widget's menu and select the `Create LACP Bond` option.
 
-![Create LACP Bond](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.png)
+![Create LACP Bond](./img/vif.lacp/create.lacp.png)
 
 In the `Create LACP Bond` dialog, enter the `Name`, then click the edit icon next to the `Subinterfaces` field.
 
-![Create LACP Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.0.png)
+![Create LACP Dialog](./img/vif.lacp/create.lacp.dialog.0.png)
 
 Select the `ct0.eth4` and `ct0.eth5` physical Ethernet ports.
 
-![Select Subinterfaces](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.subinterfaces.0.png)
+![Select Subinterfaces](./img/vif.lacp/create.lacp.dialog.subinterfaces.0.png)
 
 Click the `Select` button in the dialog, then click the `Add` button in the previous dialog.
 
 Repeat the process for the `ct1.eth4` and `ct1.eth5` physical Ethernet ports to create the `lacp1` LACP bond.
 
-![Create LACP Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.1.png)
-![Select Subinterfaces](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.subinterfaces.1.png)
+![Create LACP Dialog](./img/vif.lacp/create.lacp.dialog.1.png)
+![Select Subinterfaces](./img/vif.lacp/create.lacp.dialog.subinterfaces.1.png)
 
 Navigate to the `Settings/NETWORK/Connectors` configuration page to enable the newly created LACP bonds.
 
-![Settings/NETWORK/Connectors](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/settings.network.configuration.png)
+![Settings/NETWORK/Connectors](./img/vif.lacp/settings.network.configuration.png)
 
 Enable both `lacp0` and `lacp1` LACP bonds. You don’t need to fill in any other values; simply set the `Enabled` radio button.
 
 Enable `lacp0`:
 
-![Enable LACP Bond](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/enable.lacp.bond.0.png)
+![Enable LACP Bond](./img/vif.lacp/enable.lacp.bond.0.png)
 
 and `lacp1`:
 
-![Enable LACP Bond](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/enable.lacp.bond.1.png)
+![Enable LACP Bond](./img/vif.lacp/enable.lacp.bond.1.png)
 
 Now, we’ll create a new file virtual interface using the LACP bonds.
 
-![Create Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/create.file.vif.png)
+![Create Virtual Network Interface](./img/vif.physical/create.file.vif.png)
 
 In the `Create Virtual Network Interface` dialog, enter the `Name` and `IP Address`, then click the edit icon next to the `Subinterfaces` field.
 
-![Create Virtual Network Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/create.file.vif.dialog.png)
+![Create Virtual Network Interface Dialog](./img/vif.physical/create.file.vif.dialog.png)
 
 Select the `lacp0` and `lacp1` LACP bonds.
 
-![Select Subinterfaces](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.file.vif.dialog.subinterfaces.png)
+![Select Subinterfaces](./img/vif.lacp/create.file.vif.dialog.subinterfaces.png)
 
 Click the `Select` button in the dialog, then click the `Add` button in the previous dialog.
 #### Edit and Enable the File Virtual Interface using GUI
 Find the new `filevif0` file virtual interface in the `Settings/NETWORK/Connectors` page and click the `Edit` button.
 
-![Edit Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/edit.file.vif.png)
+![Edit Virtual Network Interface](./img/vif.lacp/edit.file.vif.png)
 
 Specify the `Netmask` and `Gateway` values, and enable the new file virtual interface.
 
-![Edit Virtual Network Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/edit.file.vif.dialog.png)
+![Edit Virtual Network Interface Dialog](./img/vif.physical/edit.file.vif.dialog.png)
 
 If you no longer need the file virtual interface, you can delete it by clicking the `Delete` command in the Ethernet list.
 
-![Delete Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/delete.file.vif.png)
+![Delete Virtual Network Interface](./img/vif.physical/delete.file.vif.png)
 
 
 
@@ -264,61 +264,61 @@ Virtual LAN (VLAN) tagging is a networking technology that allows for the logica
 
 In FlashArray, VLANs are represented by subnets. You can create a new subnet from the `Subnets` widget on the `Settings/NETWORK/Configuration` page:
 
-![Subnets List](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/subnets.list.png)
+![Subnets List](./img/vlan/subnets.list.png)
 
 Click on the `+` button to add a new subnet.
 
-![Create Subnet](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/create.subnet.png)
+![Create Subnet](./img/vlan/create.subnet.png)
 
 Once the VLAN subnet is created, you need to add physical Ethernet interfaces to the subnet by clicking the `Add interface +` button:
 
-![Add Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.png)
+![Add Interface](./img/vlan/add.interface.png)
 
 This will open the following dialog:
 
-![Interface ct0.eth4](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.ct0.eth4.png)
+![Interface ct0.eth4](./img/vlan/add.interface.ct0.eth4.png)
 
 Here, you don't need to specify the last component of the IP address for the interface.
 
 You will need to repeat this process for all interfaces you plan to use for the file virtual interface. In our example, these are `ct0.eth4`, `ct1.eth4`, `ct0.eth5`, and `ct1.eth5`.
 
-![Interface ct1.eth4](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.ct1.eth4.png)
-![Interface ct0.eth5](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.ct0.eth5.png)
-![Interface ct1.eth5](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.ct1.eth5.png)
+![Interface ct1.eth4](./img/vlan/add.interface.ct1.eth4.png)
+![Interface ct0.eth5](./img/vlan/add.interface.ct0.eth5.png)
+![Interface ct1.eth5](./img/vlan/add.interface.ct1.eth5.png)
 
 You can now see the new VLAN virtual interfaces in the `Ethernet` widget on the `Settings/NETWORK/Connectors` page. These virtual interfaces are ready to be used for creating a new file virtual interface.
 
-![VLAN Interfaces List](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/vlan.interfaces.list.png)
+![VLAN Interfaces List](./img/vlan/vlan.interfaces.list.png)
 
 To create the virtual network interface, click on the `Create Virtual Network Interface` menu item and fill in the details for the new file virtual network interface.
 
-![File Virtual Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/vlan.vif.dialog.png)
+![File Virtual Interface Dialog](./img/vlan/vlan.vif.dialog.png)
 
 Next, select the VLAN virtual interfaces in the `Select Subinterfaces` dialog:
 
-![Subinterfaces Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/vlan.vif.dialog.subinterfaces.png)
+![Subinterfaces Dialog](./img/vlan/vlan.vif.dialog.subinterfaces.png)
 
 Click the `Select` button in the dialog, then click the `Add` button in the previous dialog.
 
 Find the new `filevif0` file virtual interface in the `Settings/NETWORK/Connectors` page and click the `Edit` button.
 
-![Edit Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/edit.vlan.vif.png)
+![Edit Virtual Network Interface](./img/vlan/edit.vlan.vif.png)
 
 Specify the `Netmask` and `Gateway` values, and enable the new file virtual interface.
 
-![Edit Virtual Network Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/edit.file.vif.dialog.png)
+![Edit Virtual Network Interface Dialog](./img/vif.physical/edit.file.vif.dialog.png)
 
 If you no longer need the file virtual interface, you can delete it by clicking the `Delete` command in the Ethernet list.
 
-![Delete File Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/delete.file.vif.png)
+![Delete File Virtual Network Interface](./img/vif.physical/delete.file.vif.png)
 
 You can also delete the VLAN virtual network interfaces by clicking the `x` button next to a specific interface in the `Subnets` widget on the `Settings/NETWORK/Configuration` page.
 
-![Delete VLAN Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/delete.vlan.vifs.png)
+![Delete VLAN Virtual Network Interface](./img/vlan/delete.vlan.vifs.png)
 
 Finally, you can also delete the VLAN subnet by clicking on the `delete` icon in the `Subnets` widget on the `Settings/NETWORK/Configuration` page  if it is no longer needed.
 
-![Delete Subnet](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/delete.subnet.png)
+![Delete Subnet](./img/vlan/delete.subnet.png)
 
 # Creating a File Virtual Interface using LACP with VLAN in the GUI
 
@@ -326,92 +326,92 @@ Alternatively, you can create a new file virtual interface from LACP bonds in VL
 
 In this example, we will use the `ct0.eth4` and `ct0.eth5` ports. Right-click on the Ethernet widget's menu and select the `Create LACP Bond` option.
 
-![Create LACP Bond](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.png)
+![Create LACP Bond](./img/vif.lacp/create.lacp.png)
 
 In the `Create LACP Bond` dialog, enter the `Name`, then click the edit icon next to the `Subinterfaces` field.
 
-![Create LACP Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.0.png)
+![Create LACP Dialog](./img/vif.lacp/create.lacp.dialog.0.png)
 
 Select the `ct0.eth4` and `ct0.eth5` physical Ethernet ports.
 
-![Select Subinterfaces](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.subinterfaces.0.png)
+![Select Subinterfaces](./img/vif.lacp/create.lacp.dialog.subinterfaces.0.png)
 
 Click the `Select` button in the dialog, then click the `Add` button in the previous dialog.
 
 Repeat the process for the `ct1.eth4` and `ct1.eth5` physical Ethernet ports to create the `lacp1` LACP bond.
 
-![Create LACP Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.1.png)
-![Select Subinterfaces](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/create.lacp.dialog.subinterfaces.1.png)
+![Create LACP Dialog](./img/vif.lacp/create.lacp.dialog.1.png)
+![Select Subinterfaces](./img/vif.lacp/create.lacp.dialog.subinterfaces.1.png)
 
 Navigate to the `Settings/NETWORK/Connectors` configuration page to enable the newly created LACP bonds.
 
-![Settings/NETWORK/Connectors](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/settings.network.configuration.png)
+![Settings/NETWORK/Connectors](./img/vif.lacp/settings.network.configuration.png)
 
 Enable both `lacp0` and `lacp1` LACP bonds. You don’t need to fill in any other values; simply set the `Enabled` radio button.
 
 Enable `lacp0`:
 
-![Enable LACP Bond](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/enable.lacp.bond.0.png)
+![Enable LACP Bond](./img/vif.lacp/enable.lacp.bond.0.png)
 
 and `lacp1`:
 
-![Enable LACP Bond](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.lacp/enable.lacp.bond.1.png)
+![Enable LACP Bond](./img/vif.lacp/enable.lacp.bond.1.png)
 
 Then create a new subnet from the `Subnets` widget on the `Settings/NETWORK/Configuration` page:
 
-![Subnets List](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/subnets.list.png)
+![Subnets List](./img/vlan/subnets.list.png)
 
 Click on the `+` button to add a new subnet.
 
-![Create Subnet](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/create.subnet.png)
+![Create Subnet](./img/vlan/create.subnet.png)
 
 Once the VLAN subnet is created, you need to add the LACP bonds to the subnet by clicking the `Add interface +` button:
 
-![Add Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.png)
+![Add Interface](./img/vlan/add.interface.png)
 
 This will open the following dialog:
 
-![Interface ct0.eth4](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.lacp0.png)
+![Interface ct0.eth4](./img/vlan/add.interface.lacp0.png)
 
 Here, you don't need to specify the last component of the IP address for the interface.
 
 You will need to repeat this process for the `lacp1`.
 
-![Interface ct1.eth4](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/add.interface.lacp1.png)
+![Interface ct1.eth4](./img/vlan/add.interface.lacp1.png)
 
 You can now see the new VLAN LACP bonds in the `Ethernet` widget on the `Settings/NETWORK/Connectors` page. These VLAN LACP bonds are ready to be used for creating a new file virtual interface.
 
-![VLAN Interfaces List](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/vlan.lacp.interfaces.list.png)
+![VLAN Interfaces List](./img/vlan/vlan.lacp.interfaces.list.png)
 
 To create the virtual network interface, click on the `Create Virtual Network Interface` menu item and fill in the details for the new file virtual network interface.
 
-![File Virtual Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/vlan.vif.dialog.png)
+![File Virtual Interface Dialog](./img/vlan/vlan.vif.dialog.png)
 
 Next, select the VLAN virtual interfaces in the `Select Subinterfaces` dialog:
 
-![Subinterfaces Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/vlan.vif.dialog.lacp.subinterfaces.png)
+![Subinterfaces Dialog](./img/vlan/vlan.vif.dialog.lacp.subinterfaces.png)
 
 Click the `Select` button in the dialog, then click the `Add` button in the previous dialog.
 
 Find the new `filevif0` file virtual interface in the `Settings/NETWORK/Connectors` page and click the `Edit` button.
 
-![Edit Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/edit.lacp.vlan.vif.png)
+![Edit Virtual Network Interface](./img/vlan/edit.lacp.vlan.vif.png)
 
 Specify the `Netmask` and `Gateway` values, and enable the new file virtual interface.
 
-![Edit Virtual Network Interface Dialog](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vif.physical/edit.file.vif.dialog.png)
+![Edit Virtual Network Interface Dialog](./img/vif.physical/edit.file.vif.dialog.png)
 
 If you no longer need the file virtual interface, you can delete it by clicking the `Delete` command in the Ethernet list.
 
-![Delete File Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/delete.lacp.file.vif.png)
+![Delete File Virtual Network Interface](./img/vlan/delete.lacp.file.vif.png)
 
 You can also delete the VLAN virtual network interfaces by clicking the `x` button next to a specific interface in the `Subnets` widget on the `Settings/NETWORK/Configuration` page.
 
-![Delete VLAN Virtual Network Interface](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/delete.vlan.lacp.png)
+![Delete VLAN Virtual Network Interface](./img/vlan/delete.vlan.lacp.png)
 
 Finally, you can also delete the VLAN subnet by clicking on the `delete` icon in the `Subnets` widget on the `Settings/NETWORK/Configuration` page  if it is no longer needed.
 
-![Delete Subnet](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/vlan/delete.subnet.png)# Creating Virtual File Interface using VLAN and CLI
+![Delete Subnet](./img/vlan/delete.subnet.png)# Creating Virtual File Interface using VLAN and CLI
 Virtual LAN (VLAN) tagging is a networking technology that allows for the logical division of a network into multiple virtual networks, called VLANs, to improve network security, performance, and flexibility.
 
 In FlashArray, VLANs are represented by subnets. You can create a new subnet called `101` using the `puresubnet` command:
@@ -498,17 +498,17 @@ FlashArray allows for mutiple DNS server configurations:
 
 The DNS configuration widget is located on the `Settings/NETWORK/Configuration` page. By default, it contains the default management DNS configuration. If no additional configuration is specified, this DNS configuration is used for File Services.
 
-![DNS list](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/dns/dns.list.png)
+![DNS list](./img/dns/dns.list.png)
 
 You can edit the default DNS configuration; however, this is not recommended as it is likely used for array management.
 
-![Management DNS](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/dns/dns.mgmt.png)
+![Management DNS](./img/dns/dns.mgmt.png)
 
 In many cases, the default DNS server used by the array cannot resolve File Services-related hostnames defined in Active Directory. In such cases, you may need to use a different DNS configuration specifically for File Services.
 
 To add a File Services-specific DNS configuration, click the `+` button in the DNS widget on the `Settings/NETWORK/Configuration` page.
 
-![File Services DNS](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/dns/dns.file.png)
+![File Services DNS](./img/dns/dns.file.png)
 
 Select the `file` checkbox for this DNS configuration.
 
@@ -549,7 +549,7 @@ By default, FlashArray sends domain name lookup requests via the management netw
 
 As a best practice, Pure Storage recommends that client traffic to the FlashArray be routed over a separate IP network from management traffic. For example, the configuration below uses two different IP networks: one for NFS and SMB traffic (`192.168.2.x`) and the other (`10.x.x.x`) for management. The DNS server must be accessible from the `10.x.x.x` network but does not need to be accessible from the `192.168.2.x` network.
 
-![DNS Best Practice](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/dns/dns.best.practice.png)
+![DNS Best Practice](./img/dns/dns.best.practice.png)
 
 Regardless of which interface is being used for DNS services, that interface must be able to reach the DNS server. You can test whether DNS services are correctly configured and available by running the following command:
 
@@ -600,7 +600,7 @@ FlashArray contains the following built-in groups, which cannot be modified or r
 
 Navigate to the `Settings/Access/File Services` configuration page to review the local users and groups.
 
-![Local Users and Groups](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/file.services.page.png)
+![Local Users and Groups](./img/local.users/file.services.page.png)
 
 ## Managing Local Users and Groups using CLI
 
@@ -679,8 +679,8 @@ pureds local user list
 
 SMB clients refer to local users using their local username and the domain name 'domain'. For example, when mapping a drive from Windows, use the `domain\<local-user-name>` format.
 
-![Windows Map Drive](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/windows.map.dialog.png)
-![Windows User Login](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/windows.login.dialog.png)
+![Windows Map Drive](./img/local.users/windows.map.dialog.png)
+![Windows User Login](./img/local.users/windows.login.dialog.png)
 
 In this example, `zsvoboda` is the local user that has been previously created on the array. This user is a member of the `Administrators` group.
 
@@ -691,15 +691,15 @@ runas /noprofile /netonly /user:domain\zsvoboda "mmc compmgmt.msc"
 ```
 **NOTE:** You must execute the Windows command prompt with the `Run as administrator` option. 
 
-![Windows Computer Management](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/computer.management.png)
+![Windows Computer Management](./img/local.users/computer.management.png)
 
 Connect to the FlashArray using the file virtual interface IP address:
 
-![Windows Computer Management Connect](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/computer.management.login.png)
+![Windows Computer Management Connect](./img/local.users/computer.management.login.png)
 
 From there, you can explore the array settings, such as SMB shares, sessions, open files, or array local users:
 
-![Windows Computer Management Users](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/computer.management.users.png)
+![Windows Computer Management Users](./img/local.users/computer.management.users.png)
 
 Similarly, when mounting an SMB share from a Linux client, use the following command: 
 
@@ -721,40 +721,40 @@ For example:
 
 1. Right-click on the Windows mapped drive and select `Properties` from the drop-down menu.
 
-![Windows Explorer Mapped Drive Properties](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/explorer.share.png)
+![Windows Explorer Mapped Drive Properties](./img/local.users/explorer.share.png)
 
 2. In the properties dialog, navigate to the `Security` tab and click on the `Edit` button to add a new user to the list.
 
-![Security Properties](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/security.properties.png)
+![Security Properties](./img/local.users/security.properties.png)
 
 3. Click the `Add` button to add a FlashArray local user to the list.
 
-![Security Permissions](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/permissions.png)
+![Security Permissions](./img/local.users/permissions.png)
 
 4. Refer to the `zsvoboda` local user as `192.168.1.231\zsvoboda`.
 
-![Users](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/users.png)
+![Users](./img/local.users/users.png)
 
 5. Change the share access permissions for the array local user `zsvoboda`.
 
-![Full Access](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/local.users/permissions.full.access.png)
+![Full Access](./img/local.users/permissions.full.access.png)
 # Joining Active Directory Domain
 
 FlashArray can authenticate SMB and NFS users against an Active Directory domain. To do this, you must first create an account for the FlashArray in your target Active Directory domain.
 
 The `Active Directory Accounts` configuration widget is located on the `Settings/ACCESS/Users And Policies` page. 
 
-![DNS list](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/ad/ad.list.png)
+![DNS list](./img/ad/ad.list.png)
 
 Click on the `+` button in the top right corner of the widget.
 
 You can either create a new computer account for your array:
 
-![AD New Computer](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/ad/ad.new.account.png)
+![AD New Computer](./img/ad/ad.new.account.png)
 
 or use an existing computer account in your Active Directory:
 
-![AD Existing Computer](https://raw.githubusercontent.com/zsvoboda/fadoc/refs/heads/main/src/img/ad/ad.existing.account.png)
+![AD Existing Computer](./img/ad/ad.existing.account.png)
 
 ## Joining LDAP
 
